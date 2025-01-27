@@ -1,0 +1,15 @@
+Can you create a cover letter to fit the [role] role at [company]?
+
+ here is my resume: 
+
+ [resume]  
+
+
+and here is the job application: 
+
+[application] 
+
+and here is what I want in my coverletter, try to include all notes and write it in a humane sounding way, while maintaining a professional setting: 
+
+[cover]
+
