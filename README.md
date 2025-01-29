@@ -1,43 +1,103 @@
-# Description
+# Job Application Manager
 
-This git repo is made to make creating cv and tracking job applications easier and quicker. Bellow you can find a quick guide on what each folder and script is for:
+## Description
 
-- Defaults: This is where default resume and cover letter will go, this folder will be copied to each new job folder
-  - Prompt: this subfolder is where the script generator will go
-- Submissions: This is the folder that each job application will be created in, and the folder name will be the company name
-- cd_ui: This is the ui, to enter the job information
-- makeCv: this adds data to the excel file, and creates the job applicatiuon folder in Submissions
-- Job_list.xlsx: this keeps track of the job application
+This application helps users track their job applications efficiently. It simplifies the process by:
 
-# TODO
+- Generating folders for each job application.
+- Automatically adding both the resume and cover letter to the job folder.
+- Storing job application data in a local SQLite database.
+- Generating charts to monitor daily application goals and response rates.
+- Providing a database view where users can see and update application statuses.
 
-- [ ] add gpt api?
-- [x] add view page for database, with charts for the application rate a nd reply rate
-- [x] a frequency analyzer, to see how often I am applying and get reminders
-- [x] add type selection drop down to tkinter
-- [x] add database functionality (store in sqlite)
-- [x] a large section to write cover letter
-- [x] instead of using the entire prompt folder, just create the final prompt
-- [x] a category selection option, to choose a resume type to copy when creating doc
-- [x] a better naming sense for folders, maybe company+job?
+## Demo
 
-## Start up
+![Video Demo](#)
 
-- clone the git hub repositiory
-- Delete the .git folder
-- Clear the job_list file to start tracking yours
-- Delete the folders in Submissions
-- install python venv: `python -m venv venv`
-- activate the venv script:
+## Features
 
-```bash
-venv\Scripts\activate #Windows
-source venv/bin/activate #Mac/Linux
-```
+- [ ] Add GPT API integration?
+- add docker file
+- [x] View page for the database, including charts for application rate and reply rate.
+- [x] Frequency analyzer to track application activity and send reminders.
+- [x] Dropdown selection for job type in the Tkinter UI.
+- [x] SQLite database functionality for storing job applications.
+- [x] Dedicated section for writing cover letters.
+- [x] Create only the final AI prompt instead of using the entire prompt folder.
+- [x] Category selection for choosing the correct resume type when creating a job folder.
+- [x] Improved folder naming convention (`Company_JobTitle`).
 
-- Install dependencies: `pip install -r requirements.txt`
-- run the project: `python cd_ui.py`
+## Dependencies
 
-## Adding a job
+Make sure you have these installed:
 
-## Generating script
+- Python
+- SQLite
+
+## Setup Instructions
+
+1. **Clone the GitHub repository:**
+
+   ```bash
+   git clone <repository_url>
+   cd <repository_name>
+   ```
+
+2. **Remove the `.git` folder** (optional if you don't want Git tracking the cloned repo):
+
+   ```bash
+   rm -rf .git  # Mac/Linux
+   rmdir /s /q .git  # Windows
+   ```
+
+3. **Create a virtual environment:**
+
+   ```bash
+   python -m venv .venv
+   ```
+
+4. **Activate the virtual environment:**
+
+   ```bash
+   # Windows
+   .venv\Scripts\activate
+
+   # Mac/Linux
+   source .venv/bin/activate
+   ```
+
+5. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. **Prepare your documents:**
+
+   - Place your resumes in the `Resume/resume_types/` folder.
+   - Replace the default cover letter with your own.
+
+7. **Run the application:**
+
+   ```bash
+   python3 ./src/App.py
+   ```
+
+   You can also use the `run.sh` script to run the application
+
+   ```bash
+   chmod +x ./run.sh
+   ./run.sh
+   ```
+
+## How to Use
+
+1. Copy and paste the job description into the application text box.
+2. Write a summary of your cover letter in the designated field.
+3. A new folder will automatically appear in the `Submissions/` directory containing:
+
+   - Your resume
+   - Your cover letter
+   - The generated AI prompt
+
+4. Customize the AI prompt by modifying `./cache/prompts.txt`.

@@ -91,7 +91,8 @@ class App:
 
             # Handle dropdown for Resume
             if column_name == 'Resume':
-                options = ['Software', 'part_time', 'Embedded_systems', 'Webdev']
+                # options = ['Software', 'part_time', 'Embedded_systems', 'Webdev']
+                options =  makeCv.get_resume() or [""]
                 selected_option = tk.StringVar()
                 dropdown = ttk.Combobox(parent, textvariable=selected_option, values=options, state="readonly")
                 dropdown.grid(row=index, column=1, sticky='ew', padx=5, pady=5)
@@ -342,6 +343,7 @@ class App:
     def start(self):
         """Start the application."""
         self.root.mainloop()
+        makeCv.get_resume()
 
 
 # Initialize and start the application

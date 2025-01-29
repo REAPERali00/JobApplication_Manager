@@ -12,6 +12,13 @@ TODO:
 """
 
 
+def get_resume(directory="Resume/resume_types/"): 
+    if not os.path.exists(directory): 
+        print("could not find resume directory")
+        exit(1)
+    res = [os.path.splitext(file)[0] for file in os.listdir(directory) if file.endswith(".pdf")]
+    return res
+
 def read_file(file_path):
     """Reads the content of a file."""
     with open(file_path, "r") as f:
