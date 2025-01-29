@@ -12,7 +12,7 @@ This application helps users track their job applications efficiently. It simpli
 
 ## Demo
 
-![Video Demo](#)
+![Video Demo](/home/alireza/Documents/Git-Resume/JobApplication_Manager/assets/jobapp_demo.mp4)
 
 ## Features
 
