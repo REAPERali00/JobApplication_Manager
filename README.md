@@ -12,12 +12,13 @@ This application helps users track their job applications efficiently. It simpli
 
 ## Demo
 
-![Video Demo](/home/alireza/Documents/Git-Resume/JobApplication_Manager/assets/jobapp_demo.mp4)
+![app](./assets/app.png)
+[![Video Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://drive.google.com/file/d/1U5UDhSy-yUpJWvWRMCWYa4PqvOMzyuw1/view?usp=sharing)
 
 ## Features
 
 - [ ] Add GPT API integration?
-- add docker file
+- [ ] add docker file
 - [x] View page for the database, including charts for application rate and reply rate.
 - [x] Frequency analyzer to track application activity and send reminders.
 - [x] Dropdown selection for job type in the Tkinter UI.
@@ -77,8 +78,9 @@ Make sure you have these installed:
    - Place your resumes in the `Resume/resume_types/` folder.
    - Replace the default cover letter with your own.
 
-   > [!WARNING]
-   > Make sure your cover letter is placed in Resume/ directory, and named `Coverletter.docx`
+> [!WARNING]
+>
+> Make sure your cover letter is placed in Resume/ directory, and named `Coverletter.docx`
 
 7. **Run the application:**
 

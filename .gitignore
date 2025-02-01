@@ -30,3 +30,5 @@ venv/
 ENV/
 env/
 .venv/
+
+*.mp4
