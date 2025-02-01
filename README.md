@@ -77,6 +77,9 @@ Make sure you have these installed:
    - Place your resumes in the `Resume/resume_types/` folder.
    - Replace the default cover letter with your own.
 
+   > [!WARNING]
+   > Make sure your cover letter is placed in Resume/ directory, and named `Coverletter.docx`
+
 7. **Run the application:**
 
    ```bash
